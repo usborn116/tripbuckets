@@ -1,17 +1,14 @@
 burger:
   note: "Burger"
-  trip: :completed_trip
   budget_category: :food
   amount: 10.01
 
 fries:
   note: "Fries"
-  trip: :completed_trip
   budget_category: :food
   amount: 4.99
   
 onitsuka_tiger:
   note: "Onitsuka Tiger shoes"
-  trip: :completed_trip
   budget_category: :shopping
   amount: 129.99
