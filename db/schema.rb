@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_10_30_213852) do
+ActiveRecord::Schema[8.0].define(version: 2025_10_30_220633) do
   create_table "budget_categories", force: :cascade do |t|
     t.string "name"
     t.float "budgeted_amount"
     t.integer "trip_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "sum_cache"
     t.index ["trip_id"], name: "index_budget_categories_on_trip_id"
   end
 
@@ -38,6 +39,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_213852) do
     t.date "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "total_budget_cache"
+    t.float "budget_categories_spent_cache"
   end
 
   add_foreign_key "budget_categories", "trips"
