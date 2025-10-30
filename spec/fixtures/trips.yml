@@ -1,0 +1,7 @@
+completed_trip:
+  name: "Completed Trip"
+  end_date: Date.parse("2022-01-01")
+  
+incomplete_trip:
+  name: "Incomplete Trip"
+  end_date: Date.parse("3022-01-02")
