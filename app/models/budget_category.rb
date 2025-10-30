@@ -7,6 +7,14 @@ class BudgetCategory < ApplicationRecord
     sum_cache
   end
   
+  def add(amount)
+    update!(sum_cache: spent + amount)
+  end
+  
+  def subtract(amount)
+    update!(sum_cache: spent - amount)
+  end
+  
   private
   
   def sum_transactions

@@ -14,4 +14,22 @@ RSpec.describe BudgetCategory, type: :model do
       expect(budget_category.spent).to eq(129.99)
     end
   end
+  
+  describe '#add' do
+    it 'increments the spent amount by the amount of the transaction' do
+      budget_category = budget_categories(:food)
+      budget_category.add(100.00)
+
+      expect(budget_category.spent).to eq(115.00)
+    end
+  end
+  
+  describe '#subtract' do
+    it 'decrements the spent amount by the amount of the transaction' do
+      budget_category = budget_categories(:food)
+      budget_category.subtract(5.00)
+
+      expect(budget_category.spent).to eq(10.00)
+    end
+  end
 end
