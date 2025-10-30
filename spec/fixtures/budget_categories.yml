@@ -1,0 +1,8 @@
+food:
+  name: "Food"
+  trip: :completed_trip
+  
+shopping:
+  name: "Shopping"
+  trip: :completed_trip
+  
