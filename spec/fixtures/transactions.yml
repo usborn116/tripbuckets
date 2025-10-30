@@ -1,0 +1,14 @@
+burger:
+  note: "Burger"
+  budget_category: :food
+  amount: 10.01
+
+fries:
+  note: "Fries"
+  budget_category: :food
+  amount: 4.99
+  
+onitsuka_tiger:
+  note: "Onitsuka Tiger shoes"
+  budget_category: :shopping
+  amount: 129.99
