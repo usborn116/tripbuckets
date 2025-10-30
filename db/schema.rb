@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_10_30_220633) do
+ActiveRecord::Schema[8.0].define(version: 2025_10_30_223714) do
   create_table "budget_categories", force: :cascade do |t|
     t.string "name"
     t.float "budgeted_amount"
@@ -24,12 +24,10 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_220633) do
   create_table "transactions", force: :cascade do |t|
     t.string "note"
     t.float "amount"
-    t.integer "trip_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "budget_category_id", null: false
     t.index ["budget_category_id"], name: "index_transactions_on_budget_category_id"
-    t.index ["trip_id"], name: "index_transactions_on_trip_id"
   end
 
   create_table "trips", force: :cascade do |t|
@@ -45,5 +43,4 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_220633) do
 
   add_foreign_key "budget_categories", "trips"
   add_foreign_key "transactions", "budget_categories"
-  add_foreign_key "transactions", "trips"
 end
